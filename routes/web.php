@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'UserController@show')->name('Main-page');
+Route::post('/', 'UserController@create')->name('Create-user');
+Route::get('/somesite', 'AddressControler@check')->name('Adress-check');
+
